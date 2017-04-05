@@ -1,9 +1,9 @@
 {
-  "name": "symlinks",
+  "name": "@moonandyou/symlinks",
   "version": "0.0.1",
   "description": "Create symlinks in a safe way",
   "license": "MIT",
-  "repository": "ragingwind/symlinks",
+  "repository": "moonandyou/symlinks",
   "author": {
     "name": "ragingwind",
     "email": "ragingwind@gmail.com",

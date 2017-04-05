@@ -6,15 +6,16 @@ const globby = require('globby');
 const pify = require('pify');
 
 const pFs = pify(fs);
+let log = () => {};
 
 function existsTarget(target, unlink) {
 	return globby(target).then(files => {
 		files.forEach(f => {
 			if (unlink) {
-				console.log(`Unlink ${f}`);
+				log(`Unlink ${f}`);
 				pFs.unlinkSync(f);
 			} else {
-				console.log(`Backup from ${f} to ${f}.bak`);
+				log(`Backup from ${f} to ${f}.bak`);
 				pFs.renameSync(f, `${f}.bak`);
 			}
 		});
@@ -59,8 +60,13 @@ module.exports = (patterns, dest, filter, opts) => {
 	}
 
 	opts = Object.assign({
-		unlink: false
+		unlink: false,
+		verbose : false
 	}, opts);
+
+	if (opts.verbose) {
+		log = str => console.log(str);
+	}
 
 	return createSymlink(patterns, path.resolve(dest), filter, opts);
 };

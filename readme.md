@@ -51,6 +51,13 @@ Default: `false`
 
 Whether unlink exists symbolic link or not
 
+##### verbose
+
+Type: `boolean`<br>
+Default: `false`
+
+Show a progress
+
 ## License
 
 MIT © [MOONANDYOU](http://moonandyou.com)

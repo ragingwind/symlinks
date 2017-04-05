@@ -8,16 +8,16 @@ const pify = require('pify');
 const pFs = pify(fs);
 
 function existsTarget(target, unlink) {
-	target = unlink ? target : target + '*';
-
 	return globby(target).then(files => {
-		if (unlink) {
-			files.forEach(f => pFs.unlinkSync(f));
-		} else {
-			files.forEach(f => pFs.renameSync(f, `${f}.bak`));
-		}
-
-		return files;
+		files.forEach(f => {
+			if (unlink) {
+				console.log(`Unlink ${f}`);
+				pFs.unlinkSync(f)
+			} else {
+				console.log(`Backup from ${f} to ${f}.bak`);
+				pFs.renameSync(f, `${f}.bak`);
+			}
+		});
 	});
 }
 

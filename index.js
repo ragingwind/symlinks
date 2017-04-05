@@ -61,7 +61,7 @@ module.exports = (patterns, dest, filter, opts) => {
 
 	opts = Object.assign({
 		unlink: false,
-		verbose : false
+		verbose: false
 	}, opts);
 
 	if (opts.verbose) {

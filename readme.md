@@ -53,4 +53,4 @@ Whether unlink exists symbolic link or not
 
 ## License
 
-MIT © [Jimmy Moon](http://ragingwind.me)
+MIT © [MOONANDYOU](http://moonandyou.com)

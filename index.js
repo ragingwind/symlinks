@@ -12,7 +12,7 @@ function existsTarget(target, unlink) {
 		files.forEach(f => {
 			if (unlink) {
 				console.log(`Unlink ${f}`);
-				pFs.unlinkSync(f)
+				pFs.unlinkSync(f);
 			} else {
 				console.log(`Backup from ${f} to ${f}.bak`);
 				pFs.renameSync(f, `${f}.bak`);

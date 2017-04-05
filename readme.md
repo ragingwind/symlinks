@@ -15,7 +15,12 @@ $ npm install --save symlinks
 ```js
 const symlinks = require('symlinks');
 
-symlinks(['~/.dotfiles/**/*.symlink', '~/Downloads/local/*'], $HOME).then(links) {
+symlinks(['~/.dotfiles/**/*', '~/Downloads/local/*'], $HOME).then(links) {
+}
+
+const hidden = f => `.${path.basename(f, path.extname(f))}`;
+symlinks(['~/.dotfiles/**/*', '~/Downloads/local/*'], $HOME).then(links) {
+    // will be linked after named .filename
 }
 ```
 

@@ -1,6 +1,6 @@
 {
   "name": "@moonandyou/symlinks",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Create symlinks in a safe way",
   "license": "MIT",
   "repository": "moonandyou/symlinks",
